@@ -1,4 +1,4 @@
-OBJS = $(wildcard ./src/**/*.cpp) 
+OBJS = $(wildcard ./src/**/*.cpp)  $(wildcard ./src/*.cpp)
 
 #CC specifies which compiler we're using
 CC = g++
