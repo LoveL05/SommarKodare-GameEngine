@@ -2,6 +2,7 @@
 #define C2A1C30C_2613_4CD9_B85A_E64F7B4C7016
 
 #include <SDL2/SDL.h>
+#include <Input.h>
 #include <Window.h>
 
 class Engine {
@@ -15,6 +16,8 @@ class Engine {
         void Update();
         void LateUpdate();
         void Event(SDL_Event* Event);
+
+        InputSystem Input;
     public:
         Engine(const char* title, int width, int height);
         ~Engine();
