@@ -1,5 +1,5 @@
 #include <Input.h>
 
-bool InputSystem::GetButtonJustPressed(int button) {
+bool InputSystem::IsButtonJustPressed(int button) {
     return Al::SetHas(ButtonsJustPressed, button);
 }

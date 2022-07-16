@@ -1,5 +1,5 @@
 #include <Input.h>
 
-bool InputSystem::GetButtonUp(int button) {
+bool InputSystem::IsButtonJustReleased(int button) {
     return Al::SetHas(ButtonsJustReleased, button);
 }
