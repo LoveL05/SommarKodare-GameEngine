@@ -2,8 +2,11 @@
 #define C2A1C30C_2613_4CD9_B85A_E64F7B4C7016
 
 #include <SDL2/SDL.h>
+#include <set>
 #include <Input.h>
 #include <Window.h>
+#include <Texture.h>
+#include <AudioPlayer.h>
 
 class Engine {
     private:

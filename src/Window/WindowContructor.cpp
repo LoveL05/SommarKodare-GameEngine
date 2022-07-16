@@ -1,7 +1,8 @@
 #include <Window.h>
+#include <iostream>
 
 Window::Window(const char* title, int width, int height) {
-    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
         printf("Init: %s\n", SDL_GetError());
         return;
     }
@@ -10,13 +11,14 @@ Window::Window(const char* title, int width, int height) {
         printf("SDL_CreateWindow: %s\n", SDL_GetError());
         return;
     }
-    if (!(_Renderer = SDL_CreateRenderer(_Window, -1, SDL_RENDERER_ACCELERATED))) {
-        printf("SDL_CreateRenderer: %s\n", SDL_GetError());
-        return;
-    }
 
     if (!(_Surface = SDL_GetWindowSurface(_Window))) {
         printf("SDL_GetWindowSurface: %s\n", SDL_GetError());
+        return;
+    }
+
+    if (!(_Renderer = SDL_CreateRenderer(_Window, -1, SDL_RENDERER_ACCELERATED))) {
+        printf("SDL_CreateRenderer: %s\n", SDL_GetError());
         return;
     }
 }

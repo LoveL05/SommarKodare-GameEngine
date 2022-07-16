@@ -12,9 +12,9 @@ class InputSystem {
         void ButtonPressed(int button);
         void ButtonReleased(int button);
 
-        bool GetButtonUp(const int button);
+        bool IsButtonJustReleased(const int button);
         bool GetButtonDown(const int button);
-        bool GetButtonJustPressed(const int button);
+        bool IsButtonJustPressed(const int button);
 };
 
 #endif /* FED070C0_B471_48FE_9DB4_C26DE47A4B58 */
