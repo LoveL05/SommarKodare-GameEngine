@@ -1,0 +1,3 @@
+/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles/gameEngine.dir
+/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles/edit_cache.dir
+/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles/rebuild_cache.dir
