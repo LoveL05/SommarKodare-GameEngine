@@ -1,4 +1,5 @@
 #include "Core/CoreL.hpp"
+#include "Objects/Counter.hpp"
 
 int main(int argv, char** args)
 {
@@ -10,5 +11,9 @@ int main(int argv, char** args)
         0, 0
     );
     EngineCore engine = EngineCore(window);
+
+    Counter counter = Counter();
+    engine.addUpdateable(counter);
+
     return engine.run();
 }

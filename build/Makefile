@@ -153,6 +153,78 @@ src/Core/CoreL.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/Core/CoreL.cpp.s
 .PHONY : src/Core/CoreL.cpp.s
 
+src/Draw/ObjectRenderer.o: src/Draw/ObjectRenderer.cpp.o
+.PHONY : src/Draw/ObjectRenderer.o
+
+# target to build an object file
+src/Draw/ObjectRenderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/Draw/ObjectRenderer.cpp.o
+.PHONY : src/Draw/ObjectRenderer.cpp.o
+
+src/Draw/ObjectRenderer.i: src/Draw/ObjectRenderer.cpp.i
+.PHONY : src/Draw/ObjectRenderer.i
+
+# target to preprocess a source file
+src/Draw/ObjectRenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/Draw/ObjectRenderer.cpp.i
+.PHONY : src/Draw/ObjectRenderer.cpp.i
+
+src/Draw/ObjectRenderer.s: src/Draw/ObjectRenderer.cpp.s
+.PHONY : src/Draw/ObjectRenderer.s
+
+# target to generate assembly for a file
+src/Draw/ObjectRenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/Draw/ObjectRenderer.cpp.s
+.PHONY : src/Draw/ObjectRenderer.cpp.s
+
+src/Draw/Texture.o: src/Draw/Texture.cpp.o
+.PHONY : src/Draw/Texture.o
+
+# target to build an object file
+src/Draw/Texture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/Draw/Texture.cpp.o
+.PHONY : src/Draw/Texture.cpp.o
+
+src/Draw/Texture.i: src/Draw/Texture.cpp.i
+.PHONY : src/Draw/Texture.i
+
+# target to preprocess a source file
+src/Draw/Texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/Draw/Texture.cpp.i
+.PHONY : src/Draw/Texture.cpp.i
+
+src/Draw/Texture.s: src/Draw/Texture.cpp.s
+.PHONY : src/Draw/Texture.s
+
+# target to generate assembly for a file
+src/Draw/Texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/Draw/Texture.cpp.s
+.PHONY : src/Draw/Texture.cpp.s
+
+src/Objects/Counter.o: src/Objects/Counter.cpp.o
+.PHONY : src/Objects/Counter.o
+
+# target to build an object file
+src/Objects/Counter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/Objects/Counter.cpp.o
+.PHONY : src/Objects/Counter.cpp.o
+
+src/Objects/Counter.i: src/Objects/Counter.cpp.i
+.PHONY : src/Objects/Counter.i
+
+# target to preprocess a source file
+src/Objects/Counter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/Objects/Counter.cpp.i
+.PHONY : src/Objects/Counter.cpp.i
+
+src/Objects/Counter.s: src/Objects/Counter.cpp.s
+.PHONY : src/Objects/Counter.s
+
+# target to generate assembly for a file
+src/Objects/Counter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/Objects/Counter.cpp.s
+.PHONY : src/Objects/Counter.cpp.s
+
 src/Window/WindowL.o: src/Window/WindowL.cpp.o
 .PHONY : src/Window/WindowL.o
 
@@ -213,6 +285,15 @@ help:
 	@echo "... src/Core/CoreL.o"
 	@echo "... src/Core/CoreL.i"
 	@echo "... src/Core/CoreL.s"
+	@echo "... src/Draw/ObjectRenderer.o"
+	@echo "... src/Draw/ObjectRenderer.i"
+	@echo "... src/Draw/ObjectRenderer.s"
+	@echo "... src/Draw/Texture.o"
+	@echo "... src/Draw/Texture.i"
+	@echo "... src/Draw/Texture.s"
+	@echo "... src/Objects/Counter.o"
+	@echo "... src/Objects/Counter.i"
+	@echo "... src/Objects/Counter.s"
 	@echo "... src/Window/WindowL.o"
 	@echo "... src/Window/WindowL.i"
 	@echo "... src/Window/WindowL.s"

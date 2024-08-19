@@ -1,7 +1,7 @@
-CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o: \
- /home/lovel/Repositories/SommarKodare-GameEngine/src/Window/WindowL.cpp \
+CMakeFiles/gameEngine.dir/src/Draw/ObjectRenderer.cpp.o: \
+ /home/lovel/Repositories/SommarKodare-GameEngine/src/Draw/ObjectRenderer.cpp \
  /usr/include/stdc-predef.h \
- /home/lovel/Repositories/SommarKodare-GameEngine/src/Window/WindowL.hpp \
+ /home/lovel/Repositories/SommarKodare-GameEngine/src/Draw/ObjectRenderer.hpp \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/begin_code.h \
@@ -215,14 +215,39 @@ CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o: \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
- /usr/include/SDL2/SDL_misc.h /usr/include/c++/14.2.1/optional \
- /usr/include/c++/14.2.1/exception \
+ /usr/include/SDL2/SDL_misc.h /usr/include/c++/14.2.1/set \
+ /usr/include/c++/14.2.1/bits/stl_tree.h \
+ /usr/include/c++/14.2.1/bits/allocator.h \
+ /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
+ /usr/include/c++/14.2.1/bits/new_allocator.h \
+ /usr/include/c++/14.2.1/bits/memoryfwd.h \
+ /usr/include/c++/14.2.1/bits/stl_function.h \
+ /usr/include/c++/14.2.1/backward/binders.h \
+ /usr/include/c++/14.2.1/ext/alloc_traits.h \
+ /usr/include/c++/14.2.1/bits/alloc_traits.h \
+ /usr/include/c++/14.2.1/ext/aligned_buffer.h \
+ /usr/include/c++/14.2.1/bits/node_handle.h \
+ /usr/include/c++/14.2.1/bits/stl_set.h \
+ /usr/include/c++/14.2.1/initializer_list \
+ /usr/include/c++/14.2.1/bits/stl_multiset.h \
+ /usr/include/c++/14.2.1/bits/range_access.h \
+ /usr/include/c++/14.2.1/bits/erase_if.h \
+ /usr/include/c++/14.2.1/bits/memory_resource.h \
+ /usr/include/c++/14.2.1/cstddef \
+ /usr/include/c++/14.2.1/bits/uses_allocator.h \
+ /usr/include/c++/14.2.1/bits/uses_allocator_args.h \
+ /usr/include/c++/14.2.1/tuple /usr/include/c++/14.2.1/bits/invoke.h \
+ /usr/include/c++/14.2.1/bits/ranges_util.h \
+ /usr/include/c++/14.2.1/bits/ranges_base.h \
+ /usr/include/c++/14.2.1/bits/max_size_type.h \
+ /usr/include/c++/14.2.1/numbers \
+ /home/lovel/Repositories/SommarKodare-GameEngine/src/Draw/Texture.hpp \
+ /home/lovel/Repositories/SommarKodare-GameEngine/src/Draw/../Window/WindowL.hpp \
+ /usr/include/c++/14.2.1/optional /usr/include/c++/14.2.1/exception \
  /usr/include/c++/14.2.1/bits/exception_ptr.h \
  /usr/include/c++/14.2.1/bits/cxxabi_init_exception.h \
  /usr/include/c++/14.2.1/typeinfo \
  /usr/include/c++/14.2.1/bits/hash_bytes.h \
  /usr/include/c++/14.2.1/bits/nested_exception.h \
- /usr/include/c++/14.2.1/initializer_list \
  /usr/include/c++/14.2.1/bits/enable_special_members.h \
- /usr/include/c++/14.2.1/bits/functional_hash.h \
- /usr/include/c++/14.2.1/bits/invoke.h
+ /usr/include/c++/14.2.1/bits/functional_hash.h

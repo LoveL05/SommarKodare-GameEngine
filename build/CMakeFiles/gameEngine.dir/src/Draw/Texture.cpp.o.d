@@ -1,7 +1,8 @@
-CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o: \
- /home/lovel/Repositories/SommarKodare-GameEngine/src/Window/WindowL.cpp \
+CMakeFiles/gameEngine.dir/src/Draw/Texture.cpp.o: \
+ /home/lovel/Repositories/SommarKodare-GameEngine/src/Draw/Texture.cpp \
  /usr/include/stdc-predef.h \
- /home/lovel/Repositories/SommarKodare-GameEngine/src/Window/WindowL.hpp \
+ /home/lovel/Repositories/SommarKodare-GameEngine/src/Draw/Texture.hpp \
+ /home/lovel/Repositories/SommarKodare-GameEngine/src/Draw/../Window/WindowL.hpp \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/begin_code.h \

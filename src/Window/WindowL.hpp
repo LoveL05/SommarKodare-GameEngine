@@ -11,7 +11,6 @@ private:
 
 public:
     WindowL(const char *title, uint x, uint y, uint w, uint h, uint windowFlags, uint rendererFlags);
-
     virtual ~WindowL();
 
     SDL_Window *getNativeWindow();

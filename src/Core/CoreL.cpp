@@ -7,6 +7,10 @@ EngineCore::EngineCore(WindowL *window): m_window(window) {
 
 EngineCore::~EngineCore() {
     delete m_window;
+
+    m_updateables.erase(std::begin(m_updateables), std::end(m_updateables));
+
+    printf("Updateables: %lu\n", m_updateables.size());
 }
 
 int EngineCore::run() {
@@ -37,8 +41,11 @@ int EngineCore::run() {
         SDL_SetRenderDrawColor(m_window->getNativeRenderer(), 0, 0, 0, 255);
         SDL_RenderFillRect(m_window->getNativeRenderer(), &screen);
 
-        SDL_RenderPresent(m_window->getNativeRenderer());
+        for (auto &updateable : m_updateables) {
+            updateable.get()->update();
+        }
 
+        SDL_RenderPresent(m_window->getNativeRenderer());
     }
 
     printf("Rect: %i, %i", screen.h, screen.h);
@@ -48,4 +55,9 @@ int EngineCore::run() {
 
 void EngineCore::stop() {
     m_shouldQuit = true;
+}
+
+template <Updateable T> 
+void EngineCore::addUpdateable(T &updateable) {
+    m_updateables.insert(&updateable);
 }

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/lovel/Repositories/SommarKodare-GameEngine/src/headers -isystem /usr/include/SDL2
 
-CXX_FLAGS = 
+CXX_FLAGS = -g -std=gnu++20
 
