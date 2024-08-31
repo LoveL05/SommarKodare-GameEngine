@@ -225,6 +225,30 @@ src/Objects/Counter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/Objects/Counter.cpp.s
 .PHONY : src/Objects/Counter.cpp.s
 
+src/UpdateableObject/UpdateableObject.o: src/UpdateableObject/UpdateableObject.cpp.o
+.PHONY : src/UpdateableObject/UpdateableObject.o
+
+# target to build an object file
+src/UpdateableObject/UpdateableObject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o
+.PHONY : src/UpdateableObject/UpdateableObject.cpp.o
+
+src/UpdateableObject/UpdateableObject.i: src/UpdateableObject/UpdateableObject.cpp.i
+.PHONY : src/UpdateableObject/UpdateableObject.i
+
+# target to preprocess a source file
+src/UpdateableObject/UpdateableObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.i
+.PHONY : src/UpdateableObject/UpdateableObject.cpp.i
+
+src/UpdateableObject/UpdateableObject.s: src/UpdateableObject/UpdateableObject.cpp.s
+.PHONY : src/UpdateableObject/UpdateableObject.s
+
+# target to generate assembly for a file
+src/UpdateableObject/UpdateableObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.s
+.PHONY : src/UpdateableObject/UpdateableObject.cpp.s
+
 src/Window/WindowL.o: src/Window/WindowL.cpp.o
 .PHONY : src/Window/WindowL.o
 
@@ -294,6 +318,9 @@ help:
 	@echo "... src/Objects/Counter.o"
 	@echo "... src/Objects/Counter.i"
 	@echo "... src/Objects/Counter.s"
+	@echo "... src/UpdateableObject/UpdateableObject.o"
+	@echo "... src/UpdateableObject/UpdateableObject.i"
+	@echo "... src/UpdateableObject/UpdateableObject.s"
 	@echo "... src/Window/WindowL.o"
 	@echo "... src/Window/WindowL.i"
 	@echo "... src/Window/WindowL.s"

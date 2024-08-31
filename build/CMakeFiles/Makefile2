@@ -81,12 +81,12 @@ clean: CMakeFiles/gameEngine.dir/clean
 CMakeFiles/gameEngine.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameEngine.dir/build.make CMakeFiles/gameEngine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target gameEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target gameEngine"
 .PHONY : CMakeFiles/gameEngine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gameEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gameEngine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles 0
 .PHONY : CMakeFiles/gameEngine.dir/rule

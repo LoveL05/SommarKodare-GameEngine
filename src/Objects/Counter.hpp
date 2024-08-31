@@ -5,8 +5,11 @@
 
 class Counter: public UpdateableObject {
     int value = 0;
+    char buffer[128] = {0};
 public:
+    ~Counter() = default;
     void update();
+    int size();
 };
 
 #endif // OBJ_COUNTER_HPP

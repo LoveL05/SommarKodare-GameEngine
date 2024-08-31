@@ -12,7 +12,7 @@ template<typename T>
 concept Updateable = requires (T t) { std::is_base_of<UpdateableObject, T>::value; };
 class EngineCore {
 
-    std::set<std::unique_ptr<UpdateableObject>> m_updateables;
+    std::set<UpdateableObject *> m_updateables;
     WindowL *m_window;
 
     
@@ -25,7 +25,9 @@ public:
     int run();
     void stop();
 
-    template <Updateable T> void addUpdateable(T &updateable);
+    template <Updateable T> void addUpdateable(T &updateable) {
+        m_updateables.insert(&updateable);
+    };
 };
 
 #endif

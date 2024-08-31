@@ -9,8 +9,8 @@ WindowL::WindowL(const char *title, uint x, uint y, uint w, uint h, uint windowF
         }
     }
 
-    m_window = SDL_CreateWindow("Engine V0.1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 520, SDL_WINDOW_RESIZABLE);
-    m_renderer = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+    m_window = SDL_CreateWindow("Engine V0.1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 520, windowFlags);
+    m_renderer = SDL_CreateRenderer(m_window, -1, rendererFlags);
 }
 
 WindowL::~WindowL() {

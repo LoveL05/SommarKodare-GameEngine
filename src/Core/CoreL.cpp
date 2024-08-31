@@ -42,7 +42,7 @@ int EngineCore::run() {
         SDL_RenderFillRect(m_window->getNativeRenderer(), &screen);
 
         for (auto &updateable : m_updateables) {
-            updateable.get()->update();
+            updateable->update();
         }
 
         SDL_RenderPresent(m_window->getNativeRenderer());
@@ -57,7 +57,5 @@ void EngineCore::stop() {
     m_shouldQuit = true;
 }
 
-template <Updateable T> 
-void EngineCore::addUpdateable(T &updateable) {
-    m_updateables.insert(&updateable);
-}
+// template <Updateable T> 
+// void EngineCore::addUpdateable(T &updateable)

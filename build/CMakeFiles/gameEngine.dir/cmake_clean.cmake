@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gameEngine.dir/src/Draw/Texture.cpp.o.d"
   "CMakeFiles/gameEngine.dir/src/Objects/Counter.cpp.o"
   "CMakeFiles/gameEngine.dir/src/Objects/Counter.cpp.o.d"
+  "CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o"
+  "CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o.d"
   "CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o"
   "CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o.d"
   "CMakeFiles/gameEngine.dir/src/main.cpp.o"

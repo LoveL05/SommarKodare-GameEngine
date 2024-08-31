@@ -1,19 +1,9 @@
+#include <iostream>
+#include <set>
 #include "Core/CoreL.hpp"
-#include "Objects/Counter.hpp"
 
 int main(int argv, char** args)
 {
-    WindowL *window = new WindowL(
-        "Engine V1",
-        SDL_WINDOWPOS_CENTERED,
-        SDL_WINDOWPOS_CENTERED,
-        (uint) 640, (uint) 520,
-        0, 0
-    );
-    EngineCore engine = EngineCore(window);
-
-    Counter counter = Counter();
-    engine.addUpdateable(counter);
-
+    EngineCore engine = EngineCore(new WindowL("Sommar Kodare", 0, 0, 640, 520, SDL_WINDOW_RESIZABLE, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC));
     return engine.run();
 }

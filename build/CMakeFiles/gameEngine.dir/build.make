@@ -125,10 +125,24 @@ CMakeFiles/gameEngine.dir/src/Objects/Counter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gameEngine.dir/src/Objects/Counter.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lovel/Repositories/SommarKodare-GameEngine/src/Objects/Counter.cpp -o CMakeFiles/gameEngine.dir/src/Objects/Counter.cpp.s
 
+CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o: CMakeFiles/gameEngine.dir/flags.make
+CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o: /home/lovel/Repositories/SommarKodare-GameEngine/src/UpdateableObject/UpdateableObject.cpp
+CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o: CMakeFiles/gameEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o -MF CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o.d -o CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o -c /home/lovel/Repositories/SommarKodare-GameEngine/src/UpdateableObject/UpdateableObject.cpp
+
+CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lovel/Repositories/SommarKodare-GameEngine/src/UpdateableObject/UpdateableObject.cpp > CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.i
+
+CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lovel/Repositories/SommarKodare-GameEngine/src/UpdateableObject/UpdateableObject.cpp -o CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.s
+
 CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o: CMakeFiles/gameEngine.dir/flags.make
 CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o: /home/lovel/Repositories/SommarKodare-GameEngine/src/Window/WindowL.cpp
 CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o: CMakeFiles/gameEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o -MF CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o.d -o CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o -c /home/lovel/Repositories/SommarKodare-GameEngine/src/Window/WindowL.cpp
 
 CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.s: cmake_force
 CMakeFiles/gameEngine.dir/src/main.cpp.o: CMakeFiles/gameEngine.dir/flags.make
 CMakeFiles/gameEngine.dir/src/main.cpp.o: /home/lovel/Repositories/SommarKodare-GameEngine/src/main.cpp
 CMakeFiles/gameEngine.dir/src/main.cpp.o: CMakeFiles/gameEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/gameEngine.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/gameEngine.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gameEngine.dir/src/main.cpp.o -MF CMakeFiles/gameEngine.dir/src/main.cpp.o.d -o CMakeFiles/gameEngine.dir/src/main.cpp.o -c /home/lovel/Repositories/SommarKodare-GameEngine/src/main.cpp
 
 CMakeFiles/gameEngine.dir/src/main.cpp.i: cmake_force
@@ -159,6 +173,7 @@ gameEngine_OBJECTS = \
 "CMakeFiles/gameEngine.dir/src/Draw/ObjectRenderer.cpp.o" \
 "CMakeFiles/gameEngine.dir/src/Draw/Texture.cpp.o" \
 "CMakeFiles/gameEngine.dir/src/Objects/Counter.cpp.o" \
+"CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o" \
 "CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o" \
 "CMakeFiles/gameEngine.dir/src/main.cpp.o"
 
@@ -169,13 +184,14 @@ gameEngine: CMakeFiles/gameEngine.dir/src/Core/CoreL.cpp.o
 gameEngine: CMakeFiles/gameEngine.dir/src/Draw/ObjectRenderer.cpp.o
 gameEngine: CMakeFiles/gameEngine.dir/src/Draw/Texture.cpp.o
 gameEngine: CMakeFiles/gameEngine.dir/src/Objects/Counter.cpp.o
+gameEngine: CMakeFiles/gameEngine.dir/src/UpdateableObject/UpdateableObject.cpp.o
 gameEngine: CMakeFiles/gameEngine.dir/src/Window/WindowL.cpp.o
 gameEngine: CMakeFiles/gameEngine.dir/src/main.cpp.o
 gameEngine: CMakeFiles/gameEngine.dir/build.make
 gameEngine: /usr/lib/libSDL2main.a
 gameEngine: /usr/lib/libSDL2-2.0.so.0.3000.6
 gameEngine: CMakeFiles/gameEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable gameEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lovel/Repositories/SommarKodare-GameEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable gameEngine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gameEngine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
