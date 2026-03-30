@@ -1,7 +1,7 @@
-#ifndef FED070C0_B471_48FE_9DB4_C26DE47A4B58
-#define FED070C0_B471_48FE_9DB4_C26DE47A4B58
+#ifndef INPUT_SYSTEM_H_
+#define INPUT_SYSTEM_H_
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 #include <iostream>
 #include <Vectors.h>
 #include <set>
@@ -17,4 +17,4 @@ class InputSystem {
         bool IsButtonJustPressed(const int button);
 };
 
-#endif /* FED070C0_B471_48FE_9DB4_C26DE47A4B58 */
+#endif /* INPUT_SYSTEM_H_ */

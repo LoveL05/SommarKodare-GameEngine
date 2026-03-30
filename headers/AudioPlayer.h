@@ -1,7 +1,7 @@
-#ifndef DC24CBF4_F2FD_4FBE_9769_DC08A85640B5
-#define DC24CBF4_F2FD_4FBE_9769_DC08A85640B5
+#ifndef AUDIO_PLAYER_H_
+#define AUDIO_PLAYER_H_
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 
 class ISound {
     public:
@@ -19,10 +19,12 @@ class Sound : ISound {
         void StopSound();
         void SetupDevice();
     private:
-        SDL_AudioDeviceID m_Device;
+        static void LoadSound(void *userdata, SDL_AudioStream *stream, int additional_data, int total_data);
+
+        SDL_AudioStream *m_Device;
         SDL_AudioSpec m_AudioSpec, have;
         Uint8* m_waveStart;
         Uint32 m_waveLength;
 };
 
-#endif /* DC24CBF4_F2FD_4FBE_9769_DC08A85640B5 */
+#endif /* AUDIO_PLAYER_H_ */

@@ -1,3 +1,6 @@
 .log
 .exe
 .json
+
+libs/
+GameEngine

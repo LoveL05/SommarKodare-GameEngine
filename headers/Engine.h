@@ -1,7 +1,7 @@
-#ifndef C2A1C30C_2613_4CD9_B85A_E64F7B4C7016
-#define C2A1C30C_2613_4CD9_B85A_E64F7B4C7016
+#ifndef ENGINE_H_
+#define ENGINE_H_
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 #include <set>
 #include <Input.h>
 #include <Window.h>
@@ -26,4 +26,4 @@ class Engine {
         ~Engine();
 };
 
-#endif /* C2A1C30C_2613_4CD9_B85A_E64F7B4C7016 */
+#endif /* ENGINE_H_ */

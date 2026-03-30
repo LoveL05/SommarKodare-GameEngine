@@ -1,5 +1,5 @@
-#ifndef E8C06811_7CDC_41BC_8B11_940FAA62B1BA
-#define E8C06811_7CDC_41BC_8B11_940FAA62B1BA
+#ifndef VECTOR_H_
+#define VECTOR_H_
 
 #include <set>
 
@@ -10,4 +10,4 @@ namespace Al {
     }
 }
 
-#endif /* E8C06811_7CDC_41BC_8B11_940FAA62B1BA */
+#endif /* VECTOR_H_ */

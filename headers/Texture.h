@@ -1,19 +1,17 @@
-#ifndef F71231D2_72C2_43F4_AD8F_02B0AA995CCE
-#define F71231D2_72C2_43F4_AD8F_02B0AA995CCE
-#ifndef C5772FD0_A916_4138_A463_823A3D065162
-#define C5772FD0_A916_4138_A463_823A3D065162
+#ifndef TEXTURE_H_
+#define TEXTURE_H_
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 #include <set>
 
 class Texture2D {
         static std::set<Texture2D*> Instances;
         SDL_Texture* _Texture = nullptr;
-        SDL_Rect _Size;
-        SDL_Rect _Dest;
+        SDL_FRect _Size;
+        SDL_FRect _Dest;
     public:
-        SDL_Rect* Size();
-        SDL_Rect* Position();
+        SDL_FRect* Size();
+        SDL_FRect* Position();
         void SetSize(int x, int y);
         void SetPosition(int x, int y);
         SDL_Texture* GetTexture();
@@ -22,7 +20,4 @@ class Texture2D {
         static std::set<Texture2D*> GetInstances();
 };
 
-#endif /* C5772FD0_A916_4138_A463_823A3D065162 */
-
-
-#endif /* F71231D2_72C2_43F4_AD8F_02B0AA995CCE */
+#endif /* TEXTURE_H_ */

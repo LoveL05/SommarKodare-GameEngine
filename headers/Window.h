@@ -1,7 +1,7 @@
-#ifndef A8E646D8_EB5F_4149_8007_EE8C714CC18E
-#define A8E646D8_EB5F_4149_8007_EE8C714CC18E
+#ifndef WINDOW_H_
+#define WINDOW_H_
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 
 class Window {
     private:
@@ -16,4 +16,4 @@ class Window {
         ~Window();
 };
 
-#endif /* A8E646D8_EB5F_4149_8007_EE8C714CC18E */
+#endif /* WINDOW_H_ */
