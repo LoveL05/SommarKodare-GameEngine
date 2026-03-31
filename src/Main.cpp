@@ -12,7 +12,7 @@ public:
     }
 
     void OnStart() override {
-        this->m_sound = new Sound("waluigi.wav");
+        this->m_sound = new Sound("assets/test_sound.wav");
         std::cout << m_sound << std::endl;
         m_sound->SetupDevice();
         m_sound->PlaySound();
