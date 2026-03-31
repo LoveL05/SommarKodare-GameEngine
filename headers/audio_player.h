@@ -7,7 +7,7 @@
 class ISound {
     public:
         virtual ~ISound() {};
-        virtual void PlaySound() = 0;
+        virtual void playSound() = 0;
         virtual void StopSound() = 0;
 };
 
@@ -16,9 +16,9 @@ class Sound : ISound {
         Sound(const char* path);
         ~Sound();
 
-        void PlaySound();
+        void playSound();
         void StopSound();
-        void SetupDevice();
+        void setupDevice();
     private:
         static void LoadSound(void *userdata, SDL_AudioStream *stream, int additional_data, int total_data);
 

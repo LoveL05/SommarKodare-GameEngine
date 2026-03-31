@@ -1,4 +1,4 @@
-#include "AudioPlayer.h"
+#include "audio_player.h"
 
 void Sound::LoadSound(void *userdata, SDL_AudioStream *stream, int additional_data, int total_data) {
     Sound *sound = (Sound *) userdata;
@@ -17,14 +17,14 @@ Sound::~Sound() {
     SDL_DestroyAudioStream(m_Device);
 }
 
-void Sound::PlaySound() {
+void Sound::playSound() {
     if (!SDL_ResumeAudioStreamDevice(m_Device)) {
         SDL_Log("SDL_ResumeAudioStreamDevice: %s\n", SDL_GetError());
         return;
     }
 }
 
-void Sound::SetupDevice() {
+void Sound::setupDevice() {
     m_Device = SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, &m_AudioSpec, LoadSound, this);
     if (!m_Device) {
         SDL_Log("OpenAudioDevice: %s\n", SDL_GetError());

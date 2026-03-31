@@ -1,5 +1,5 @@
-#include <Engine.h>
-#include <Updateable.h>
+#include "engine.h"
+#include "updateable.h"
 
 class SoundPlayer : public Startable {
 public:
@@ -11,11 +11,11 @@ public:
         delete m_sound;
     }
 
-    void OnStart() override {
+    void onStart() override {
         this->m_sound = new Sound("assets/test_sound.wav");
         std::cout << m_sound << std::endl;
-        m_sound->SetupDevice();
-        m_sound->PlaySound();
+        m_sound->setupDevice();
+        m_sound->playSound();
     }
    
 private:

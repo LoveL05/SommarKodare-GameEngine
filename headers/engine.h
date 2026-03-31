@@ -3,11 +3,11 @@
 
 #include <SDL3/SDL.h>
 #include <set>
-#include <Input.h>
-#include <Window.h>
-#include <Texture.h>
-#include <AudioPlayer.h>
-#include <Updateable.h>
+#include "input.h"
+#include "window.h"
+#include "texture.h"
+#include "audio_player.h"
+#include "updateable.h"
 
 class Engine {
 public:
@@ -21,17 +21,18 @@ public:
     void AddUpdateable(Updateable *updateable);
     void AddStartable(Startable *startable);
     
-    InputSystem Input;
-    
+    InputSystem &getInputSystem();
+
     Engine(const char* title, int width, int height);
     ~Engine();
     
 private:
     std::string_view m_title;
     int m_defaultWidth, m_defaultHeight;
-
-    static bool _Running;
-    Window* _Window = nullptr;
+    
+    InputSystem m_inputSystem;
+    static bool m_running;
+    Window* m_window = nullptr;
     std::set<Updateable *> m_updateables;
     std::set<Startable *> m_startables;
 };

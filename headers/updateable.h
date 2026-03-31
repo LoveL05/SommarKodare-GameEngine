@@ -3,12 +3,12 @@
 
 class Updateable {
 public:
-    virtual void OnUpdate() = 0;
+    virtual void onUpdate() = 0;
 };
 
 class Startable {
 public:
-    virtual void OnStart() = 0;
+    virtual void onStart() = 0;
 };
 
 #endif /* UPDATEABLE_H_ */

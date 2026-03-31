@@ -1,6 +1,6 @@
-#include <Engine.h>
+#include "engine.h"
 
-bool Engine::_Running = true;
+bool Engine::m_running = true;
 
 Engine::Engine(const char* title, int width, int height) : m_title(title), m_defaultWidth(width), m_defaultHeight(height) {
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
@@ -10,13 +10,13 @@ Engine::Engine(const char* title, int width, int height) : m_title(title), m_def
 }
 
 Engine::~Engine() {
-    delete _Window;
+    delete m_window;
     SDL_Quit();
 }
 
 void Engine::Event(SDL_Event* Event) {
-    Input.ButtonsJustPressed.clear();
-    Input.ButtonsJustReleased.clear();
+    m_inputSystem.m_buttonsJustPressed.clear();
+    m_inputSystem.m_buttonsJustReleased.clear();
     while (SDL_PollEvent(Event)) {
         switch (Event->type)
         {
@@ -24,10 +24,10 @@ void Engine::Event(SDL_Event* Event) {
             Stop();
             break;
         case SDL_EVENT_KEY_DOWN:
-            Input.ButtonPressed(Event->key.raw);
+            m_inputSystem.buttonPressed(Event->key.raw);
             break;
         case SDL_EVENT_KEY_UP:
-            Input.ButtonReleased(Event->key.raw);
+            m_inputSystem.buttonReleased(Event->key.raw);
             break;
         default:
             break;
@@ -40,7 +40,7 @@ void Engine::LateUpdate() {
 }
 
 bool Engine::IsRunning() {
-    return _Running;
+    return m_running;
 }
 
 void Engine::SetRunning(bool Running) {
@@ -50,22 +50,22 @@ void Engine::SetRunning(bool Running) {
 }
 
 void Engine::Stop() {
-    _Running = false;
+    m_running = false;
 }
 
 void Engine::Update() {
-    if (Texture2D::GetInstances().size() > 0) {
-        SDL_RenderClear(_Window->GetRenderer());
+    if (Texture2D::getInstances().size() > 0) {
+        SDL_RenderClear(m_window->getRenderer());
 
-        for (Texture2D* t : Texture2D::GetInstances()) {
-            SDL_RenderTexture(_Window->GetRenderer(), t->GetTexture(), t->Size(), t->Position());
+        for (Texture2D* t : Texture2D::getInstances()) {
+            SDL_RenderTexture(m_window->getRenderer(), t->getTexture(), t->getSize(), t->getPosition());
         }
 
         for (auto i : this->m_updateables) {
-            i->OnUpdate();
+            i->onUpdate();
         }
 
-        SDL_RenderPresent(_Window->GetRenderer());
+        SDL_RenderPresent(m_window->getRenderer());
     }
 }
 
@@ -78,19 +78,19 @@ void Engine::AddStartable(Startable *startable) {
 }
 
 int Engine::Run() {
-    _Window = new Window(this->m_title.cbegin(), this->m_defaultWidth, this->m_defaultHeight);
-    Input = InputSystem();
-    _Running = true;
+    m_window = new Window(this->m_title.cbegin(), this->m_defaultWidth, this->m_defaultHeight);
+    m_inputSystem = InputSystem();
+    m_running = true;
 
-    SDL_UpdateWindowSurface(_Window->GetWindow());
-    // SDL_SetRenderLogicalPresentation(_Window->GetRenderer(), this->m_defaultWidth, this->m_defaultHeight, SDL_LOGICAL_PRESENTATION_LETTERBOX);
+    SDL_UpdateWindowSurface(m_window->getWindow());
+    // SDL_SetRenderLogicalPresentation(m_window->getRenderer(), this->m_defaultWidth, this->m_defaultHeight, SDL_LOGICAL_PRESENTATION_LETTERBOX);
     
     for (auto i : this->m_startables) {
-        i->OnStart();
+        i->onStart();
     }
 
     SDL_Event event;
-    while (_Running) {
+    while (m_running) {
         Event(&event);
         Update();
 
