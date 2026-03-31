@@ -15,11 +15,6 @@ SDL_Renderer* Window::GetRenderer() {
 }
 
 Window::Window(const char* title, int width, int height) {
-    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
-        printf("Init: %s\n", SDL_GetError());
-        return;
-    }
-
     _Window = SDL_CreateWindow(title, width, height, SDL_WINDOW_RESIZABLE);
 
     if (!_Window) {

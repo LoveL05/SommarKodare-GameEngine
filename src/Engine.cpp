@@ -2,27 +2,11 @@
 
 bool Engine::_Running = true;
 
-Engine::Engine(const char* title, int width, int height) {
-    _Window = new Window(title, width, height);
-    Input = InputSystem();
-    _Running = true;
-
-    SDL_UpdateWindowSurface(_Window->GetWindow());
-    SDL_SetRenderLogicalPresentation(_Window->GetRenderer(), width, height, SDL_LOGICAL_PRESENTATION_LETTERBOX);
-    
-    Sound* waluigi = new Sound("waluigi.wav");
-    waluigi->SetupDevice();
-    waluigi->PlaySound();
-    
-    SDL_Event event;
-    while (_Running) {
-        Event(&event);
-        Update();
-
-        LateUpdate();
+Engine::Engine(const char* title, int width, int height) : m_title(title), m_defaultWidth(width), m_defaultHeight(height) {
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
+        printf("Init: %s\n", SDL_GetError());
+        return;
     }
-
-    delete waluigi;
 }
 
 Engine::~Engine() {
@@ -72,9 +56,46 @@ void Engine::Stop() {
 void Engine::Update() {
     if (Texture2D::GetInstances().size() > 0) {
         SDL_RenderClear(_Window->GetRenderer());
+
         for (Texture2D* t : Texture2D::GetInstances()) {
             SDL_RenderTexture(_Window->GetRenderer(), t->GetTexture(), t->Size(), t->Position());
         }
+
+        for (auto i : this->m_updateables) {
+            i->OnUpdate();
+        }
+
         SDL_RenderPresent(_Window->GetRenderer());
     }
+}
+
+void Engine::AddUpdateable(Updateable *updateable) {
+    this->m_updateables.insert(updateable);
+}
+
+void Engine::AddStartable(Startable *startable) {
+    this->m_startables.insert(startable);
+}
+
+int Engine::Run() {
+    _Window = new Window(this->m_title.cbegin(), this->m_defaultWidth, this->m_defaultHeight);
+    Input = InputSystem();
+    _Running = true;
+
+    SDL_UpdateWindowSurface(_Window->GetWindow());
+    // SDL_SetRenderLogicalPresentation(_Window->GetRenderer(), this->m_defaultWidth, this->m_defaultHeight, SDL_LOGICAL_PRESENTATION_LETTERBOX);
+    
+    for (auto i : this->m_startables) {
+        i->OnStart();
+    }
+
+    SDL_Event event;
+    while (_Running) {
+        Event(&event);
+        Update();
+
+        LateUpdate();
+    }
+
+    return 0;
 }

@@ -5,7 +5,7 @@ void Sound::LoadSound(void *userdata, SDL_AudioStream *stream, int additional_da
     SDL_PutAudioStreamData(stream, sound->m_waveStart, sound->m_waveLength);
 }
 
-Sound::Sound(const char* path) {
+Sound::Sound(const char* path) : m_path(path) {
     if (!SDL_LoadWAV(path, &m_AudioSpec, &m_waveStart, &m_waveLength)) {
         SDL_Log("LoadWAV: %s\n", SDL_GetError());
         return;
@@ -18,7 +18,10 @@ Sound::~Sound() {
 }
 
 void Sound::PlaySound() {
-    SDL_ResumeAudioStreamDevice(m_Device);
+    if (!SDL_ResumeAudioStreamDevice(m_Device)) {
+        SDL_Log("SDL_ResumeAudioStreamDevice: %s\n", SDL_GetError());
+        return;
+    }
 }
 
 void Sound::SetupDevice() {

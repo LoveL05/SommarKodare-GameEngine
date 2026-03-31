@@ -2,6 +2,7 @@
 #define AUDIO_PLAYER_H_
 
 #include <SDL3/SDL.h>
+#include <string_view>
 
 class ISound {
     public:
@@ -25,6 +26,7 @@ class Sound : ISound {
         SDL_AudioSpec m_AudioSpec, have;
         Uint8* m_waveStart;
         Uint32 m_waveLength;
+        const std::string_view m_path;
 };
 
 #endif /* AUDIO_PLAYER_H_ */
